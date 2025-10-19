@@ -1,0 +1,9 @@
+@use "btn_scema" as vars with (
+  $font-size: 20px
+);
+
+.small_btn {
+  font-size: vars.$font-size;
+  color: vars.$btn_color;
+  background-color: vars.$btn_bg_color;
+}
