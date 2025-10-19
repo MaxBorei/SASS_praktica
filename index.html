@@ -7,23 +7,80 @@
     <title>SASS Tutorial template</title>
   </head>
   <body>
+    <div class="task">
+      <div class="task-info">
+        <h3 class="task-caption">Send benefit review by Sunday</h3>
+        <p class="task-deadline">
+          Due date: <span class="task-deadline-date">December 23, 2023</span>
+        </p>
+        <div class="performer">
+          <img
+            class="performer-avatar"
+            src="https://i.pravatar.cc/40?img=12"
+            width="28"
+            height="28"
+            alt="George Fields avatar"
+          />
+          <span class="performer-bio">George Fields</span>
+        </div>
+      </div>
 
-  <!-- Task card -->
-  <section class="task">
-    <div class="task-info">
-      <h3 class="task-title">Send benefit review by Sunday</h3>
-      <p class="task-subtitle">Due date: <time datetime="2023-12-23">December 23, 2023</time></p>
-
-      <div class="task-owner flex">
-        <img class="owner-avatar" src="avatar-george.jpg" alt="George Fields" width="28" height="28">
-        <span class="owner-name">George Fields</span>
+      <div class="task-badges">
+        <p class="badge-info">Reminder</p>
+        <div class="badge badge-completed">Completed</div>
       </div>
     </div>
 
-    <div class="task-badges flex">
-      <p class="badge-info">Reminder</p>
-      <div class="badge badge-completed">Completed</div>
-    
+    <!-- Card 2 -->
+    <div class="task">
+      <div class="task-info">
+        <h3 class="task-caption">Send benefit review by Sunday</h3>
+        <p class="task-deadline">
+          Due date: <span class="task-deadline-date">December 23, 2023</span>
+        </p>
+        <div class="performer">
+          <img
+            class="performer-avatar"
+            src="https://i.pravatar.cc/40?img=20"
+            width="28"
+            height="28"
+            alt="George Fields avatar"
+          />
+          <span class="performer-bio">George Fields</span>
+        </div>
+      </div>
+
+      <div class="task-badges">
+        <p class="badge-info">Call</p>
+        <div class="badge badge-ended">Ended</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="task">
+      <div class="task-info">
+        <h3 class="task-caption">Send benefit review by Sunday</h3>
+        <p class="task-deadline">
+          Due date: <span class="task-deadline-date">December 23, 2023</span>
+        </p>
+        <div class="performer">
+          <img
+            class="performer-avatar"
+            src="https://i.pravatar.cc/40?img=32"
+            width="28"
+            height="28"
+            alt="George Fields avatar"
+          />
+          <span class="performer-bio">George Fields</span>
+        </div>
+      </div>
+
+      <div class="task-badges">
+        <p class="badge-info">Reminder</p>
+        <div class="badge badge-active">Active</div>
+      </div>
+    </div>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
