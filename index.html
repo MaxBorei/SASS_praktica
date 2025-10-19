@@ -7,15 +7,23 @@
     <title>SASS Tutorial template</title>
   </head>
   <body>
-    <section class="section">
-      <h1 class="title">Page title</h1>
-      <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-        voluptatem, aliquam commodi distinctio dolorum cumque quis velit, vitae,
-        nobis adipisci aliquid? Alias architecto libero culpa excepturi nulla
-        dolore odit beatae!
-      </p>
-    </section>
+
+  <!-- Task card -->
+  <section class="task">
+    <div class="task-info">
+      <h3 class="task-title">Send benefit review by Sunday</h3>
+      <p class="task-subtitle">Due date: <time datetime="2023-12-23">December 23, 2023</time></p>
+
+      <div class="task-owner flex">
+        <img class="owner-avatar" src="avatar-george.jpg" alt="George Fields" width="28" height="28">
+        <span class="owner-name">George Fields</span>
+      </div>
+    </div>
+
+    <div class="task-badges flex">
+      <p class="badge-info">Reminder</p>
+      <div class="badge badge-completed">Completed</div>
+    
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
