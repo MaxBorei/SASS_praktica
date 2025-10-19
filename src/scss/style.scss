@@ -1,13 +1,12 @@
 // @use "reset";
 // @use "base/base";
 // @use "components/badge";
+@use "--examples--/mixins"; // Examples lesson 09
 
 @use "base/fonts";
 @use "components/alert";
 
 @use "--examples--/extend";
-
-// Examples lesson 09
 //
 // @use "components/alert";
 // @use "--examples--/lesson-09/extend";
