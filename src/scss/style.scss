@@ -2,9 +2,8 @@
 // @use "base/base";
 // @use "components/badge";
 
-@use "--examples--/lesson_2/scope";
-@use "--examples--/lesson_2/button";
+@use "--examples--/ampersand";
 
-/* ==END== */
+@use "--examples--/combinators";
 
-@use "--examples--/lesson_2/base";
+@use "--examples--/nesting";
