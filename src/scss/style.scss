@@ -2,8 +2,12 @@
 // @use "base/base";
 // @use "components/badge";
 
-@use "--examples--/badge";
+@use "base/fonts";
+@use "components/alert";
 
-@use "--examples--/math";
+@use "--examples--/extend";
 
-@use "--examples--/task";
+// Examples lesson 09
+//
+// @use "components/alert";
+// @use "--examples--/lesson-09/extend";
