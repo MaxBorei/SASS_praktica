@@ -2,182 +2,159 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/sass.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SASS Tutorial template</title>
+    <title>Utility classes. Principles of building a design system</title>
+    <link rel="icon" type="image/svg+xml" href="/sass.svg" />
   </head>
-  <body>
-    <header class="margin-md">
-      <h1 class="title">CSS demo + IF/EACH/FOR</h1>
-      <p class="muted" style="text-align: center">
-        Працюємо з <span class="chip">p-8/16/20</span>,
-        <span class="chip">margin-*</span>,
-        <span class="chip">fw-400..700</span>, аватарами і шаблонами
-        <span class="chip">IF / EACH / FOR</span>
-      </p>
+  <body class="bg-bg-secondary-1 color-white">
+    <!-- Header -->
+    <header class="d-flex justify-between items-center p-m bg-bg-secondary-2">
+      <a href="#" class="d-inline-flex items-center gap-s">
+        <!-- Лого (svg з утилітою fill) -->
+        <span class="fill-primary">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2L2 7l10 5 10-5-10-5Zm0 7L2 4v13l10 5 10-5V4l-10 5Z"
+            />
+          </svg>
+        </span>
+        <span class="fw-700 fs-l">Brand</span>
+        <span class="visually-hidden">Головна</span>
+      </a>
+
+      <nav class="d-flex items-center gap-m">
+        <a href="#" class="fs-s color-light">Продукт</a>
+        <a href="#" class="fs-s color-light">Ціни</a>
+        <a href="#" class="fs-s color-light">Про нас</a>
+        <a href="#" class="fs-s color-light">Контакти</a>
+        <a
+          href="#"
+          class="p-s px-m bg-primary color-white fw-600 fs-s d-inline-block"
+          >Увійти</a
+        >
+      </nav>
     </header>
 
-    <!-- Аватари -->
-    <section class="margin-md">
-      <h2 class="fw-600" style="text-align: center">Аватари</h2>
-      <div class="grid grid-2 margin-sm">
-        <div class="demo-card p-16">
-          <div class="row">
-            <img
-              class="square-avatar"
-              src="https://picsum.photos/seed/square/200"
-              alt="Square avatar"
-            />
-            <div>
-              <div class="fw-700">Square</div>
-              <div class="muted">.square-avatar (100×100)</div>
-            </div>
-          </div>
-        </div>
-        <div class="demo-card p-16">
-          <div class="row">
-            <img
-              class="circle-avatar"
-              src="https://picsum.photos/seed/circle/200"
-              alt="Circle avatar"
-            />
-            <div>
-              <div class="fw-700">Circle</div>
-              <div class="muted">
-                .circle-avatar (100×100 + border-radius:50%)
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Вага шрифту -->
-    <section class="margin-md">
-      <h2 class="fw-600" style="text-align: center">Вага шрифту</h2>
-      <div class="demo-card p-20">
-        <p class="fw-400">.fw-400 — звичайний текст</p>
-        <p class="fw-500">.fw-500 — трохи жирніший</p>
-        <p class="fw-600">.fw-600 — напівжирний</p>
-        <p class="fw-700">.fw-700 — жирний</p>
-      </div>
-    </section>
-
-    <!-- Відступи -->
-    <section class="margin-md">
-      <h2 class="fw-600" style="text-align: center">
-        Внутрішні/зовнішні відступи
-      </h2>
-      <div class="grid">
-        <div class="demo-card p-8 margin-sm">
-          <div class="fw-600">.p-8 .margin-sm</div>
-          <div class="muted">padding: 8px; margin: 24px;</div>
-        </div>
-        <div class="demo-card p-16 margin-md">
-          <div class="fw-600">.p-16 .margin-md</div>
-          <div class="muted">padding: 16px; margin: 32px;</div>
-        </div>
-        <div class="demo-card p-20 margin-lg">
-          <div class="fw-600">.p-20 .margin-lg</div>
-          <div class="muted">padding: 20px; margin: 36px;</div>
-        </div>
-        <div class="demo-card p-20 margin-xl">
-          <div class="fw-600">.p-20 .margin-xl</div>
-          <div class="muted">padding: 20px; margin: 68px;</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Тренування: IF / EACH / FOR -->
-    <section class="margin-md">
-      <h2 class="fw-600 title">Шаблони: IF / EACH / FOR</h2>
-
-      <!-- IF -->
-      <div class="demo-card p-16 margin-sm">
-        <div class="fw-700 margin-sm">IF</div>
-        <!-- Svelte-подібний:
-          {#if user.premium}
-            <div class="p-8 fw-600">Дякуємо за преміум, {user.name}!</div>
-          {:else}
-            <div class="p-8">Стань преміум, щоб отримати бонуси.</div>
-          {/if}
-        -->
-        <!-- Handlebars-подібний:
-          {{#if user.premium}}
-            <div class="p-8 fw-600">Дякуємо за преміум, {{user.name}}!</div>
-          {{else}}
-            <div class="p-8">Стань преміум, щоб отримати бонуси.</div>
-          {{/if}}
-        -->
-        <div class="p-8 demo-card">
-          <div class="muted">Тут з’являється контент за умовою.</div>
-        </div>
-      </div>
-
-      <!-- EACH -->
-      <div class="demo-card p-16 margin-sm">
-        <div class="fw-700 margin-sm">EACH (ітерація масиву)</div>
-        <!-- Svelte:
-          {#each products as p, idx}
-            <div class="p-8 margin-sm demo-card">
-              <div class="fw-600">{idx + 1}. {p.name}</div>
-              <div class="muted">{p.price} ₴</div>
-            </div>
-          {/each}
-        -->
-        <!-- Handlebars:
-          {{#each products}}
-            <div class="p-8 margin-sm demo-card">
-              <div class="fw-600">{{@index+1}}. {{this.name}}</div>
-              <div class="muted">{{this.price}} ₴</div>
-            </div>
-          {{/each}}
-        -->
-        <div class="grid">
-          <div class="p-8 demo-card">
-            <div class="fw-600">1. Футболка “Basic”</div>
-            <div class="muted">399 ₴</div>
-          </div>
-          <div class="p-8 demo-card">
-            <div class="fw-600">2. Светр “Warm”</div>
-            <div class="muted">899 ₴</div>
-          </div>
-          <div class="p-8 demo-card">
-            <div class="fw-600">3. Куртка “City”</div>
-            <div class="muted">1899 ₴</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FOR -->
-      <div class="demo-card p-16 margin-sm">
-        <div class="fw-700 margin-sm">FOR (рахунковий цикл)</div>
-        <!-- У шаблонізаторах без явного for — робимо each по Array(N):
-          {#each Array(5) as _, i}
-            <div class="p-8 margin-sm demo-card">Елемент № {i + 1}</div>
-          {/each}
-        -->
-        <!-- Liquid/Nunjucks/Blade-подібний:
-          {% for i in 1..5 %}
-            <div class="p-8 margin-sm demo-card">Елемент № {{ i }}</div>
-          {% endfor %}
-        -->
-        <div class="row">
-          <div class="p-8 demo-card">Елемент № 1</div>
-          <div class="p-8 demo-card">Елемент № 2</div>
-          <div class="p-8 demo-card">Елемент № 3</div>
-          <div class="p-8 demo-card">Елемент № 4</div>
-          <div class="p-8 demo-card">Елемент № 5</div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="margin-xl" style="text-align: center">
-      <p class="muted">
-        Шаблон узгоджено з твоїм DOCTYPE, класом <code>dark</code>, favicon і
-        title. Можна експериментувати 🚀
+    <!-- Hero -->
+    <section class="d-flex flex-center-column text-center p-xl gap-m">
+      <h1 class="fs-xxl fw-800 color-text-primary-1">
+        Utility-класи. Дизайн-система на SASS
+      </h1>
+      <p class="fs-m color-light w-8">
+        Швидко верстаємо інтерфейси завдяки узгодженим відступам, кольорам,
+        типографіці та флекс-комбінаторам. Одна сітка — без зайвої магії.
       </p>
+      <div class="d-flex justify-center gap-s">
+        <a
+          href="#"
+          class="p-m px-l bg-primary color-white fw-600 fs-s d-inline-block"
+        >
+          Почати зараз
+        </a>
+        <a
+          href="#"
+          class="p-m px-l bg-bg-secondary-2 color-white fw-600 fs-s d-inline-block"
+        >
+          Документація
+        </a>
+      </div>
+    </section>
+
+    <!-- Features (12-columns) -->
+    <section class="p-xl">
+      <h2 class="fs-xl fw-700 mb-m text-center">Модулі утиліт</h2>
+
+      <div class="d-flex flex-wrap gap-m justify-between">
+        <!-- Card -->
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Spacing</h3>
+          <p class="fs-s color-light">
+            Відступи через m/p + (t,r,b,l,x,y): <code>mt-s</code>,
+            <code>px-l</code>, <code>gap-m</code>.
+          </p>
+        </article>
+
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Flex</h3>
+          <p class="fs-s color-light">
+            Вирівнювання: <code>justify-between</code>,
+            <code>items-center</code>, плюс шорткати <code>flex-center</code>,
+            <code>flex-center-column</code>.
+          </p>
+        </article>
+
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Typography</h3>
+          <p class="fs-s color-light">
+            Розміри <code>fs-xxs…fs-xxl</code>, вага <code>fw-100…fw-900</code>,
+            вирівнювання <code>text-center</code>.
+          </p>
+        </article>
+
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Colors</h3>
+          <p class="fs-s color-light">
+            Тексти/фони/заливки: <code>color-primary</code>,
+            <code>bg-dark</code>, <code>fill-info</code> (для SVG).
+          </p>
+        </article>
+
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Sizing</h3>
+          <p class="fs-s color-light">
+            12-колонна сітка: <code>w-1…w-12</code>, а також
+            <code>w-full</code>, <code>h-full</code>.
+          </p>
+        </article>
+
+        <article class="bg-bg-secondary-2 p-m w-4">
+          <h3 class="fs-l fw-700 mb-s color-text-primary-2">Utils</h3>
+          <p class="fs-s color-light">
+            Дисплей <code>d-flex</code>, позиціювання <code>p-relative</code>,
+            обрізка тексту <code>text-overflow</code>, доступність
+            <code>visually-hidden</code>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="p-xl bg-bg-secondary-2">
+      <div class="d-flex justify-between items-center flex-wrap gap-m">
+        <div class="w-3 text-center">
+          <div class="fs-xl fw-800 color-success">+120</div>
+          <div class="fs-s color-light">класів утиліт</div>
+        </div>
+        <div class="w-3 text-center">
+          <div class="fs-xl fw-800 color-info">12</div>
+          <div class="fs-s color-light">колонок</div>
+        </div>
+        <div class="w-3 text-center">
+          <div class="fs-xl fw-800 color-warning">6</div>
+          <div class="fs-s color-light">модулів</div>
+        </div>
+        <div class="w-3 text-center">
+          <div class="fs-xl fw-800 color-danger">0</div>
+          <div class="fs-s color-light">зайвих залежностей</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-l d-flex justify-between items-center bg-dark">
+      <p class="fs-s color-gray">© 2025 Brand. Всі права захищені.</p>
+      <div class="d-flex items-center gap-s">
+        <a
+          href="#"
+          class="fs-s color-light text-overflow"
+          style="max-width: 140px"
+          >Політика конфіденційності та умови користування</a
+        >
+        <a href="#" class="fs-s color-light">Підтримка</a>
+      </div>
     </footer>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
