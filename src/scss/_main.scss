@@ -1,0 +1,7 @@
+/* src/scss/main.scss */
+// @use "./utils/variables"; /* підтягне utils/_index.scss з @forward-ами */
+@use "./base/fonts"; /* якщо є base/_fonts.scss */
+
+:root {
+  font-family: sans-serif;
+}
